@@ -17,5 +17,11 @@ namespace ITMobileClientPrototype
             p.setCoordinates(x1, x2);
         }
 
+        public static void updateCoordinates(Player p, int x, int y)
+        {
+            
+            p.setCoordinates(x, y);
+        }
+
     }
 }

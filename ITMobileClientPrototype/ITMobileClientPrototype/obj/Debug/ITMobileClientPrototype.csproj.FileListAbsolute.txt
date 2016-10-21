@@ -14,3 +14,5 @@ C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMo
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.View.resources
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.Properties.Resources.resources
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.csproj.GenerateResource.Cache
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.pdb

@@ -6,7 +6,8 @@ using System.Text;
 namespace ITMobileClientPrototype
 {
     //Класс хранит модель игрока
-    class Player
+    [Serializable]
+    public class Player : MarshalByRefObject
     {
         //почта
         string email;
