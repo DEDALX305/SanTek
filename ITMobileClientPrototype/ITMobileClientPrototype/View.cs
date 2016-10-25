@@ -89,6 +89,7 @@ namespace ITMobileClientPrototype
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string mail = textBox1.Text;
             string pass = textBox2.Text;
             bool result = ServerHandler.tryAuth(sh, mail, pass);
