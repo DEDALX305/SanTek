@@ -1,0 +1,18 @@
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.exe
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.pdb
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.Properties.Resources.resources
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.csproj.GenerateResource.Cache
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.exe
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.pdb
+C:\Users\Acer\AppData\Local\Temporary Projects\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.View.resources
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.pdb
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.pdb
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.View.resources
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.Properties.Resources.resources
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.csproj.GenerateResource.Cache
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.pdb

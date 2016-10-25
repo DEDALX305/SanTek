@@ -1,0 +1,10 @@
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\bin\Release\ITServer.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\bin\Release\ITServer.pdb
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\bin\Release\ITMobileClientPrototype.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\bin\Release\ITMobileClientPrototype.pdb
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.Form1.resources
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.Properties.Resources.resources
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.csproj.GenerateResource.Cache
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.exe
+C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.pdb
