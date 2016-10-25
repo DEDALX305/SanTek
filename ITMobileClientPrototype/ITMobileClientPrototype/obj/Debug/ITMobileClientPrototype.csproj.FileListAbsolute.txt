@@ -18,3 +18,11 @@ C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMo
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.pdb
 D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.exe
 D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.pdb
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ResolveAssemblyReference.cache
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.View.resources
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.Properties.Resources.resources
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\obj\Debug\ITMobileClientPrototype.csproj.GenerateResource.Cache
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.exe
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.pdb
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.exe
+D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.pdb

@@ -9,6 +9,8 @@ namespace ITMobileClientPrototype
     [Serializable]
     public class Player : MarshalByRefObject
     {
+        //список карт
+        List<int> cardsList = new List<int>();
         //почта
         string email;
         //очки
@@ -17,6 +19,8 @@ namespace ITMobileClientPrototype
         int x = 0;
         int y = 0;
 
+        private string token;
+
         //возвращает email
         public string getEmail()
         {
@@ -24,11 +28,14 @@ namespace ITMobileClientPrototype
             return email;
         }
 
+        public string getToken(){
+            return token;
+        }
 
-
-        public Player(string s)
+        public Player(string s, string token)
         {
             email = s;
+            this.token = token;
 
         }
 
@@ -43,9 +50,29 @@ namespace ITMobileClientPrototype
             return x;
         }
 
+        public int[] getCards()
+        {
+            return cardsList.ToArray();
+        }
+
+        public void addCard(int type){
+            cardsList.Add(type);
+        }
+
+        public void removeCard(int type)
+        {
+           
+            cardsList.Remove(type);
+          
+        }
+
         public int getY()
         {
             return y;
+        }
+
+        public void clearCards(){
+            cardsList = new List<int>();
         }
 
         public int getPoints()
@@ -57,5 +84,7 @@ namespace ITMobileClientPrototype
         {
             points = pp;
         }
+
+       
     }
 }

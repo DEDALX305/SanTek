@@ -50,6 +50,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -105,7 +108,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // listBox1
@@ -131,7 +134,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(349, 262);
+            this.label3.Location = new System.Drawing.Point(591, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 8;
@@ -140,7 +143,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(310, 184);
+            this.button3.Location = new System.Drawing.Point(456, 107);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 41);
             this.button3.TabIndex = 9;
@@ -157,11 +160,12 @@
             this.button4.Text = "Обмен";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(307, 240);
+            this.label4.Location = new System.Drawing.Point(591, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 11;
@@ -175,7 +179,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 1000;
+            this.timer3.Interval = 5000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // button5
@@ -241,11 +245,43 @@
             this.label5.Text = "X";
             this.label5.Visible = false;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(456, 158);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(130, 95);
+            this.listBox2.TabIndex = 17;
+            this.listBox2.Visible = false;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(310, 158);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(130, 95);
+            this.listBox3.TabIndex = 18;
+            this.listBox3.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(310, 259);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(130, 23);
+            this.button9.TabIndex = 19;
+            this.button9.Text = "Отправить предложение";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 287);
+            this.ClientSize = new System.Drawing.Size(738, 287);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button8);
@@ -295,6 +331,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button9;
     }
 }
 

@@ -43,26 +43,55 @@ namespace ITMobileClientPrototype
         //обновляет лог
         private void getUpdates(string email)
         {
+            updatePoints(email);
+            updateCards(email);
+            updateMessages(email);
+        }
+
+        public void updateMessages(string email)
+        {
             richTextBox1.Clear();
             string[] lines = sh.getMessages(email);
-            performUpdates(lines, p);
             foreach (string s in lines)
             {
+                if (s.StartsWith(sh.trade_hash))
+                {
+                    
+                    string[] l = s.Split('|');
+                    string from = l[1];
+                    string to = l[2];
+                    int from_ = Convert.ToInt32(l[3]);
+                    int to_ = Convert.ToInt32(l[4]);
+                    sh.completeTrade(from, to, from_, to_);
+
+                    MessageBox.Show("Вам пришел обмен от " + from + " на вашу карту " + to_.ToString() + " на карту " + from_.ToString());
+
+                    MessageBox.Show("Удаляем у [" + p.getEmail() + "] карту + <" + from_ + ">");
+
+                    sh.removeCardFrom(p.getEmail(), from_);
+                    MessageBox.Show("Удаляем у [" + to + "] карту + <" + to_ + ">");
+
+                    sh.removeCardFrom(to,to_);
+
+                    MessageBox.Show("Добавляем игроку [" + p.getEmail() + "] карту + <" + to_ + ">");
+                    sh.addCardTo(p.getEmail(), to_);
+                    MessageBox.Show("Добавляем игроку [" + to + "] карту + <" + from_ + ">");
+                    sh.addCardTo(to, from_);
+
+
+                    
+                    
+                }
+                else
                 richTextBox1.AppendText(s + "\n");
             }
 
         }
-
-        //обновляет модель игрока в соответствии с новыми сообщениями с сервера
-        private void performUpdates(string[] lines, Player p)
-        {
-            p.setPoints(p.getPoints() + 10);
-            updatePoints();
-        }
-
         //обновляет очки на экране
-        private void updatePoints()
+        private void updatePoints(string email)
         {
+            int points = sh.getPointsFor(email);
+            p.setPoints(points);
             label3.Text = "Очки: " + p.getPoints().ToString();
         }
 
@@ -86,18 +115,34 @@ namespace ITMobileClientPrototype
 
         }
 
+        public void updateCards(string email)
+        {
+            int[] ss = sh.getCardsFor(email);
+            p.clearCards();
 
+            foreach (int z in ss)
+            {
+                p.addCard(z);
+            }
+            listBox2.Items.Clear();
+            foreach (int s in p.getCards())
+            {
+                listBox2.Items.Add(s.ToString());
+            }
+
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
             string mail = textBox1.Text;
             string pass = textBox2.Text;
-            bool result = ServerHandler.tryAuth(sh, mail, pass);
+            string result = ServerHandler.tryAuth(sh, mail, pass);
 
-            if (result)
+            if (result != null)
             {
                 isOnline = true;
-                p = new Player(mail);
+                p = new Player(mail, result);
                 this.Text = p.getEmail();
                 
                 
@@ -115,6 +160,7 @@ namespace ITMobileClientPrototype
                 button6.Visible = true;
                 button7.Visible = true;
                 button8.Visible = true;
+                listBox2.Visible = true;
                 lmin = 0;
                 lmax = sh.getMaxX();
                 tmin = 0;
@@ -123,7 +169,7 @@ namespace ITMobileClientPrototype
                 textBox3.Visible = true;
                 p.setCoordinates(0, 0);
 
-                sh.addPlayer(p.getEmail());
+                sh.addPlayer(p.getEmail(), p.getToken());
 
                 messageLog(mail + " вошел в сеть.");
                 
@@ -163,7 +209,6 @@ namespace ITMobileClientPrototype
             if (index != -1)
             {
                 string s = (string)listBox1.Items[index];
-
                 messageLog(sh.private_hash + s + "|" + p.getEmail() + ": " + textBox3.Text);
             }
             else
@@ -233,8 +278,48 @@ namespace ITMobileClientPrototype
 
         private void View_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            sh.deletePlayer(p.getEmail());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index == -1) return;
+            string otherplayerEmail = (string)listBox1.Items[index];
+            int[] otherplayercardsList = sh.getCardsFor(otherplayerEmail);
+            listBox3.Visible = true;
+            listBox3.Items.Clear();
+            foreach (int x in otherplayercardsList)
+            {
+                listBox3.Items.Add(x.ToString());
+            }
+            button9.Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == -1) return;
+
+            if (listBox2.SelectedIndex == -1) return;
+            if (listBox3.SelectedIndex == -1) return;
+
+            int what = listBox2.SelectedIndex;
+            int for_what = listBox3.SelectedIndex;
+            string to = (string)listBox1.Items[listBox1.SelectedIndex];
+            string from = p.getEmail();
+
+            
+            int from_ = Convert.ToInt32(listBox2.Items[what]);
+            int to_ = Convert.ToInt32(listBox3.Items[for_what]);
+
+            if (what == -1 || for_what == -1) return;
+            sh.createTrade(from, to, from_, to_);
+            listBox3.Visible = false;
+            button9.Visible = false;
+            MessageBox.Show("Предложение об обмене отправлено!");
+        }
+
+
 
       
 

@@ -13,24 +13,11 @@ namespace ITMobileClientPrototype
 
         //попытка авторизации на сервере игры с данными email:password
         //возвращает true, если авторизация успешна
-        public static bool tryAuth(ITServer.ServerHandler sh, string email, string password)
+        public static string tryAuth(ITServer.ServerHandler sh, string email, string password)
         {
             return sh.checkCredentials(email, password);
             
         }
-
-       
-
-       
-
-        
-
-
-       
-
-
-       
-
 
     }
 }

@@ -12,6 +12,8 @@ using System.Net.Sockets;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using ITMobileClientPrototype;
+using System.IO;
+using System.Web;
 
 namespace ITServer
 {
@@ -34,10 +36,12 @@ namespace ITServer
 
             timer1.Start();
 
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             listBox1.Items.Clear();
             foreach (Player p in sh.playersList)
             {
@@ -48,6 +52,17 @@ namespace ITServer
             foreach (string s in sh.messagesList)
             {
                 richTextBox1.AppendText(s + "\n");
+            }
+
+            foreach (TradeRequest tr in sh.trades)
+            {
+                string from = tr.getFrom_email();
+                string to = tr.getTo_email();
+                int from_ = tr.getFrom_card();
+                int to_ = tr.getTo_card();
+                if (!tr.isCompleted())
+                    if (!sh.messagesList.Contains(sh.trade_hash + from + "|" + to + "|" + from_.ToString() + "|" + to_.ToString())) 
+                sh.addMessage(sh.trade_hash + from + "|" + to + "|" + from_.ToString() + "|" + to_.ToString());
             }
 
             this.Invalidate();
@@ -91,6 +106,18 @@ namespace ITServer
             base.OnPaint(e);
 
 
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Player p in sh.playersList)
+            {
+                Random r = new Random();
+                int x = r.Next(ServerHandler.maxCardTypes) + 1;
+                p.addCard(sh.getRegion(p.getX(), p.getY()) * 10 + x);
+               
+            }
             
         }
     }
