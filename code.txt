@@ -1,0 +1,107 @@
+
+        private void StartServer(string prefix)
+        {
+            server = new HttpListener();
+            // текуща€ ос не поддерживаетс€
+            if (!HttpListener.IsSupported) return;
+            //об€зательно в конце должна быть коса€ черта
+            if (string.IsNullOrEmpty(prefix))
+                throw new ArgumentException("prefix");
+            server.Prefixes.Add(prefix);
+            //запускаем север
+            server.Start();
+            this.Text = "—ервер запущен!";
+            //сервер запущен? “огда слушаем вход€щие соединени€
+            while (server.IsListening)
+            {
+                //ожидаем вход€щие запросы
+                HttpListenerContext context = server.GetContext();
+                //получаем вход€щий запрос
+                HttpListenerRequest request = context.Request;
+                //обрабатываем POST запрос
+                //запрос получен методом POST (пришли данные формы)
+
+                if (request.HttpMethod == "GET")
+                {
+                    //показать, что пришло от клиента
+                    MessageBox.Show(request.Url.ToString());
+                    //завершаем работу сервера
+                    if (!flag) return;
+                }
+                if (request.HttpMethod == "POST")
+                {
+                    //показать, что пришло от клиента
+                    ShowRequestData(request);
+                    //завершаем работу сервера
+                    if (!flag) return;
+                }
+
+
+                //формируем ответ сервера:
+                //динамически создаЄм страницу
+                string responseString = @"<!DOCTYPE HTML>
+<html><head></head><body>
+<form method=""post"" action=""register"">
+<p><b>Email: </b><br>
+<input type=""text"" name=""myname"" size=""40""></p>
+<p><b>ѕароль: </b><br>
+<input type=""text"" name=""myname"" size=""40""></p>
+<p><input type=""submit"" value=""«арегистрироватьс€""></p>
+<p><input type=""submit"" value=""¬ойти""></p>
+</form></body></html>";
+                //отправка данных клиенту
+                HttpListenerResponse response = context.Response;
+                response.ContentType = "text/html; charset=UTF-8";
+                byte[] buffer = Encoding.UTF8.GetBytes(responseString);
+                response.ContentLength64 = buffer.Length;
+                using (Stream output = response.OutputStream)
+                {
+                    output.Write(buffer, 0, buffer.Length);
+                }
+            }
+        }
+
+        private void ShowRequestData(HttpListenerRequest request)
+        {
+            //есть данные от клиента?
+            if (!request.HasEntityBody) return;
+            //смотрим, что пришло
+
+            MessageBox.Show(request.Url.ToString());
+
+            using (Stream body = request.InputStream)
+            {
+                using (StreamReader reader = new StreamReader(body))
+                {
+                    string text = reader.ReadToEnd();
+                    
+                    
+                    
+                    
+                    string[] data = text.Split('&');
+                    string email = data[0];
+                    string p1 = data[1];
+                    
+                    email = System.Web.HttpUtility.UrlDecode(email, Encoding.UTF8);
+                    p1 = System.Web.HttpUtility.UrlDecode(p1, Encoding.UTF8);
+                    
+                    
+                        //выводим им€
+                        MessageBox.Show("¬ы успешно зарегистрировались: " + email);
+                        string[] ss = p1.Split('=');
+                        p1 = ss[1];
+                        MessageBox.Show("ѕароль = " + p1);
+                        flag = true;
+                        
+                    
+                    
+                }
+            }
+        }
+
+
+
+
+
+            string uri = @"http://localhost:8400/";
+            StartServer(uri);
