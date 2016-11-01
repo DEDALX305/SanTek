@@ -25,6 +25,7 @@ namespace ITServer
             this.from_email = from_email;
             this.to_card = to_card;
             this.to_email = to_email;
+            this.number = number;
         }
 
         public void complete()

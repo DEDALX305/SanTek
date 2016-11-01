@@ -14,12 +14,13 @@ namespace ITServer
         private string email_to;
         private bool status;
 
-        public AcceptTrade(int trade_state_number, string email_who, string email_to, bool status)
+        public AcceptTrade(int trade_state_number, string email_who, string token_who, string email_to, bool status)
         {
             this.trade_state_number = trade_state_number;
             this.email_to = email_to;
             this.email_who = email_who;
             this.status = status;
+            this.token_who = token_who;
         }
 
 
