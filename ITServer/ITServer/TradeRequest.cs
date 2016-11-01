@@ -12,7 +12,14 @@ namespace ITServer
         private string to_email;
         private int from_card;
         private int to_card;
-        public TradeRequest(string from_email, string to_email, int from_card, int to_card)
+        private int number;
+
+        public int getNumber()
+        {
+            return number;
+        }
+
+        public TradeRequest(string from_email, string to_email, int from_card, int to_card, int number)
         {
             this.from_card = from_card;
             this.from_email = from_email;

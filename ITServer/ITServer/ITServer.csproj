@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcceptTrade.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -85,8 +86,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RequestUpdates.cs" />
     <Compile Include="ServerHandler.cs" />
+    <Compile Include="State.cs" />
     <Compile Include="TradeRequest.cs" />
+    <Compile Include="Updates.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
