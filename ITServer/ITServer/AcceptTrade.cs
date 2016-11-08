@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace ITServer
 {
@@ -21,6 +24,27 @@ namespace ITServer
             this.email_who = email_who;
             this.status = status;
             this.token_who = token_who;
+        }
+
+
+        private void toJSON(string text)
+        {
+            text = JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            });
+
+           
+        }
+
+        private static AcceptTrade fromJSON(string text)
+        {
+            
+            var ds = JsonConvert.DeserializeObject<AcceptTrade>(text, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            });
+            return ds;
         }
 
 

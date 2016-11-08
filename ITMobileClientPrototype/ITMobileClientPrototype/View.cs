@@ -12,6 +12,12 @@ using System.Net.Sockets;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using ITServer;
+using System.Collections;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+
 
 namespace ITMobileClientPrototype
 {
@@ -134,6 +140,9 @@ namespace ITMobileClientPrototype
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
+           
+
 
             string mail = textBox1.Text;
             string pass = textBox2.Text;

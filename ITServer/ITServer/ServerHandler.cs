@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using ITMobileClientPrototype;
 using System.Drawing;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+using System.IO;
+
 
 namespace ITServer
 {
