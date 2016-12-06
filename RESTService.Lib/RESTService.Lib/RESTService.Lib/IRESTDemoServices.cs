@@ -12,6 +12,6 @@ namespace RESTService.Lib
     {
         [OperationContract]
         [WebGet(UriTemplate = Routing.GetClientRoute, BodyStyle = WebMessageBodyStyle.Bare)]
-        string GetClientNameById(string Id);
+        string GetClient(string action, string id);
     }
 }

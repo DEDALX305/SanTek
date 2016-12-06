@@ -8,6 +8,6 @@ namespace RESTService.Lib
 {
     public static class Routing
     {
-        public const string GetClientRoute = "/Client/{id}";
+        public const string GetClientRoute = "/{action}/{id}";
     }
 }

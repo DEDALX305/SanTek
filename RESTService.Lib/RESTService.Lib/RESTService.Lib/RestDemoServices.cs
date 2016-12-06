@@ -12,15 +12,12 @@ namespace RESTService.Lib
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class RestDemoServices : IRESTDemoServices
     {
-        public string GetClientNameById(string Id)
+        public string GetClient(string action, string id)
         {
-            Random r = new Random();
-            string ReturnString = "";
-            int Idnum = Convert.ToInt32(Id);
-            for (int i = 0; i < Idnum; i++)
-                ReturnString += char.ConvertFromUtf32(r.Next(65, 85));
 
-            return ReturnString;
+            Console.WriteLine(action);
+            Console.WriteLine(id);
+            return action + id;
 
         }
     }
