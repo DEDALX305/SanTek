@@ -33,7 +33,6 @@ namespace ITServer
                 TypeNameHandling = TypeNameHandling.All
             });
 
-
         }
 
         private static State fromJSON(string text)

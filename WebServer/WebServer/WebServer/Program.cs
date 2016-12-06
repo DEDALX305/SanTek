@@ -60,13 +60,7 @@ namespace WebServer
             // we probably shouldn't be using a streamwriter for all output from handlers either
             outputStream = new StreamWriter(new BufferedStream(socket.GetStream()));
 
-            Console.WriteLine("!");
-            parseRequest();
-            readHeaders();
-            Console.WriteLine(http_url);
-
-            Console.WriteLine(http_method);
-
+        
 
             try
             {
