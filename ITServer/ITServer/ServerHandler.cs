@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using ITMobileClientPrototype;
 using System.Drawing;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+using System.IO;
+
 
 namespace ITServer
 {
@@ -21,6 +25,8 @@ namespace ITServer
 
         public string private_hash = "337711732STOP|";
         public string trade_hash = "76345364564562STOP|";
+
+        private int trades_num = 0;
 
 
         private bool isNearby(Player p1, Player p2)
@@ -173,7 +179,8 @@ namespace ITServer
         }
 
         public void createTrade(string from_email, string to_email, int from_card, int to_card){
-            trades.Add(new TradeRequest(from_email, to_email, from_card, to_card));
+            trades_num++;
+            trades.Add(new TradeRequest(from_email, to_email, from_card, to_card, trades_num));
             
         }
 

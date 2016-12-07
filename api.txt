@@ -1,0 +1,106 @@
+XPlore API
+ 
+Регистрация в игре
+ 
+GET /registrate?email=X&password1=Y&password2=Z HTTP/1.1
+ 
+RegistrationSuccess.json
+{
+  "RegistrationSuccess": {
+    "token": "18382991923",
+  }
+}
+ 
+Получение токена
+ 
+GET /token?email=X&password=Y HTTP/1.1
+ 
+Token.json
+{
+  "Token": {
+    "token": "18382991923",
+  }
+}
+ 
+Передача новых координат с клиента
+ 
+POST /state HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+ 
+{
+  "State": {
+    "token": "18382991923",
+    "email" : "drizhiloda@gmail.com",
+    "x" : "78.67",
+    "y" : "24.65"
+  }
+}
+ 
+Запрос сообщений с сервера
+ 
+GET /request-updates?token=X HTTP/1.1
+ 
+Updates.json
+ 
+{
+  "Updates": {
+    "token": "18382991923",
+    "email" : "drizhiloda@gmail.com",
+    "messages" : ["Личное сообщение от X: Y", "Вы получили карту 3-2"],
+    "players_nearby" : ["email1", "email2"]
+  }
+}
+ 
+Запрос на торговую операцию с другим игроком
+ 
+POST /trade-request HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+ 
+{
+  "TradeRequest": {
+    "token": "18382991923",
+    "email_from" : "drizhiloda@gmail.com",
+    "email_for" : "mail@example.com",
+    "card" : "3-2",
+    "for_card" : "4-6"
+  }
+}
+ 
+Подтверждение обмена с сервера
+ 
+POST /trade-request HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+ 
+{
+  "AcceptTrade": {
+    "token": "18382991923",
+    "email_from" : "drizhiloda@gmail.com",
+    "email_for" : "mail@example.com",
+    "card" : "3-2",
+    "for_card" : "4-6",
+    "accepted" : "true",
+    "trade_number" : "717"
+  }
+}
+ 
+ 
+Пример сообщений-ошибок
+ 
+JsonError.json
+{
+  "JsonError": {
+    "code" : "226",
+    "description" : "Пароли не совпадают"
+  }
+}
+ 
+JsonError.json
+{
+  "JsonError": {
+    "code" : "112",
+    "description" : "Данный игрок не находится рядом с вами, обмен невозможен"
+  }
+}

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace ITServer
 {
@@ -12,12 +15,20 @@ namespace ITServer
         private string to_email;
         private int from_card;
         private int to_card;
-        public TradeRequest(string from_email, string to_email, int from_card, int to_card)
+        private int number;
+
+        public int getNumber()
+        {
+            return number;
+        }
+
+        public TradeRequest(string from_email, string to_email, int from_card, int to_card, int number)
         {
             this.from_card = from_card;
             this.from_email = from_email;
             this.to_card = to_card;
             this.to_email = to_email;
+            this.number = number;
         }
 
         public void complete()
@@ -50,6 +61,27 @@ namespace ITServer
         {
             return from_email;
         }
+
+        private void toJSON(string text)
+        {
+            text = JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            });
+
+
+        }
+
+        private static TradeRequest fromJSON(string text)
+        {
+
+            var ds = JsonConvert.DeserializeObject<TradeRequest>(text, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            });
+            return ds;
+        }
+
 
     }
 }

@@ -26,3 +26,5 @@ D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileC
 D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITMobileClientPrototype.pdb
 D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.exe
 D:\IT\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\ITServer.pdb
+D:\it\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\Newtonsoft.Json.dll
+D:\it\SanTek\ITMobileClientPrototype\ITMobileClientPrototype\bin\Debug\Newtonsoft.Json.xml

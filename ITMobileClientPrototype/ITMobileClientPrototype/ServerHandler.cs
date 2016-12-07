@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ITServer;
+using System.Collections;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
 
 namespace ITMobileClientPrototype
 {
@@ -15,6 +20,10 @@ namespace ITMobileClientPrototype
         //возвращает true, если авторизация успешна
         public static string tryAuth(ITServer.ServerHandler sh, string email, string password)
         {
+
+
+            
+
             return sh.checkCredentials(email, password);
             
         }

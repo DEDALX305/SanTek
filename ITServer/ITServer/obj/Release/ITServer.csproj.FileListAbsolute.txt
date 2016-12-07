@@ -8,3 +8,13 @@ C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Releas
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.csproj.GenerateResource.Cache
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.exe
 C:\Users\Acer\Documents\Visual Studio 2008\Projects\ITServer\ITServer\obj\Release\ITServer.pdb
+D:\it\SanTek\ITServer\ITServer\bin\Release\ITServer.exe
+D:\it\SanTek\ITServer\ITServer\bin\Release\ITServer.pdb
+D:\it\SanTek\ITServer\ITServer\bin\Release\ITMobileClientPrototype.exe
+D:\it\SanTek\ITServer\ITServer\bin\Release\ITMobileClientPrototype.pdb
+D:\it\SanTek\ITServer\ITServer\obj\Release\ResolveAssemblyReference.cache
+D:\it\SanTek\ITServer\ITServer\obj\Release\ITServer.Form1.resources
+D:\it\SanTek\ITServer\ITServer\obj\Release\ITServer.Properties.Resources.resources
+D:\it\SanTek\ITServer\ITServer\obj\Release\ITServer.csproj.GenerateResource.Cache
+D:\it\SanTek\ITServer\ITServer\obj\Release\ITServer.exe
+D:\it\SanTek\ITServer\ITServer\obj\Release\ITServer.pdb

@@ -1,0 +1,5 @@
+D:\it\SanTek\WebServer\WebServer\WebServer\bin\Debug\WebServer.exe
+D:\it\SanTek\WebServer\WebServer\WebServer\bin\Debug\WebServer.pdb
+D:\it\SanTek\WebServer\WebServer\WebServer\obj\Debug\ResolveAssemblyReference.cache
+D:\it\SanTek\WebServer\WebServer\WebServer\obj\Debug\WebServer.exe
+D:\it\SanTek\WebServer\WebServer\WebServer\obj\Debug\WebServer.pdb
